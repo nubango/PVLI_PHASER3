@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Examen final (febrero) – Programación de Videojuegos en Lenguajes Interpretados</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <style>
+  body {
+      font-family: georgia;
+      margin-bottom: 2em;
+      margin-top: 1em;
+      margin-left: 2em;
+      margin-right: 2em;
+      text-align: justify;
+      /* width: 35em; */
+      alignment-baseline: central;
+  }
+  
+  h1.title {
+      font-size: 3em;
+      text-align: center;
+  }
+  
+  h2.author {
+      text-align: center;
+  }
+  
+  h3.date {
+      text-align: center;
+  }
+  </style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Examen final (febrero) – Programación de Videojuegos en Lenguajes Interpretados</h1>
+<h3 class="date">25/1/2017</h3>
+</div>
+<h1 id="tareas">Tareas</h1>
+<p>A partir de la plantilla, se harán las siguientes modificaciones hasta conseguir un nuevo juego que funcionará sobre la misma plantilla. Es decir, sólo hay que hacer cambios en el código JavaScript, no en la estructura que se provee.</p>
+<h2 id="añadir-otro-personaje-1.5-puntos">Añadir otro personaje (<em>1.5 puntos</em>)</h2>
+<ul>
+<li>Se creará otro personaje que aparecerá a la derecha. El personaje tendrá la misma imagen (<code>dude.png</code>, en el directorio <code>images</code>) (<em>1.5 puntos</em>).</li>
+</ul>
+<h2 id="dotar-de-entrada-al-nuevo-personaje-2.5-puntos">Dotar de entrada al nuevo personaje (<em>2.5 puntos</em>)</h2>
+<ul>
+<li>Hay que modificar el personaje inicial para que se mueva con <code>I</code> (salto), <code>J</code> (izquierda), <code>L</code> (derecha) (<em>0.5 puntos</em>).</li>
+<li>El nuevo personaje se moverá con las teclas <code>W</code> (salto), <code>A</code> (izquierda), <code>D</code> (derecha) (<em>0.5 puntos</em>).</li>
+<li>El código del movimiento de ambos personajes <strong>tiene que ser común</strong>. No es válido copiar y pegar las condiciones de movimiento. Hay que ponerlas en una función y llamarla de forma apropiada (<em>1.5 puntos</em>).</li>
+</ul>
+<blockquote>
+<p>Se recomienda que crees un nuevo objeto para cada uno de los conjuntos de teclas, con campos para izquierda, derecha y salto, y se lo asignes a cada personaje. Así podrás reutilizar mucho del código provisto.</p>
+</blockquote>
+<h2 id="crear-colisiones-3-puntos">Crear colisiones (<em>3 puntos</em>)</h2>
+<ul>
+<li>Hacer que los personajes <em>no puedan traspasarse</em>, que sean “sólidos” (<em>1.5 puntos</em>).</li>
+<li>Después, hacer que, al chocar, reboten (<em>1.5 puntos</em>).</li>
+</ul>
+<h2 id="crear-vida-mostrarla-y-terminar-3-puntos">Crear vida, mostrarla y terminar (<em>3 puntos</em>)</h2>
+<ul>
+<li>Un personaje tendrá 10 puntos de vida, y otro, 5 (<em>0.5 puntos</em>).</li>
+<li>Cada vez que haya una colisión, cada personaje pierde 1 punto (<em>1.5 puntos</em>).</li>
+<li>La vida de ambos se mostrará constantemente por pantalla (<em>1 punto</em>).</li>
+</ul>
+<h2 id="evaluación">Evaluación</h2>
+<p>El examen tendrá una nota de 0 a 10, siendo necesario un 5 para aprobar.</p>
+<p>Si el código del examen no se ejecuta (error de sintaxis, solución muy lejana a lo pedido), estará suspenso.</p>
+<p>Cada apartado recibirá, como máximo, el valor indicado. Se valorará el estilo, el uso correcto de construcciones y se tendrá en cuenta la solución en general (no sólo los apartados independientemente).</p>
+<h2 id="ejecución">Ejecución</h2>
+<p>El código se ejecutará igual que se ha hecho durante el curso, ejecutando los comandos:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">npm</span> install
+<span class="ex">node_modules/.bin/gulp</span> run</code></pre></div>
+<p>Se espera que, al ejecutarse estos dos comandos, se abra automáticamente una ventana del navegador con la solución.</p>
+<h1 id="entrega">Entrega</h1>
+<p>La entrega se hará a través del Campus Virtual, en la entrega habilitada para tal propósito. <strong>Se debe subir un proyecto completo en un archivo comprimido, pero sin la carpeta <code>node_modules</code></strong>. El proyecto deberá tener un archivo de texto con el nombre del alumno y su DNI. <strong>Un proyecto sin este archivo no será evaluado</strong>.</p>
+<p>La entrega es individual.</p>
+<h1 id="materiales">Materiales</h1>
+<p>Se pueden usar todos los materiales disponibles (Internet, apuntes), excepto comunicación con otros compañeros o personas externas. Esto se considerará copia.</p>
+<h1 id="copia">Copia</h1>
+<p>Cualquier intento fructuoso o infructuoso de copia supondrá la aplicación de la normativa de la asignatura y el suspenso de la convocatoria actual.</p>
+</body>
+</html>
